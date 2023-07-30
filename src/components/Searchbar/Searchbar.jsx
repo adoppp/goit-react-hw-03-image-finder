@@ -22,7 +22,6 @@ export class Searchbar extends Component {
     }
 
     render() {
-        const { value } = this.state;
         return (
             <header className={css.searchbar}>
                 <form className={css.form} onSubmit={this.handleSubmit}>
