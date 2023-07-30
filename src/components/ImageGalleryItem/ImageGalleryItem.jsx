@@ -9,7 +9,7 @@ export const ImageGalleryItem = ({ imageId, imageURL, onOpenModal }) => {
   
     return (
       <li className={css.galleryItem} key={imageId} onClick={handleClick}>
-        <img src={imageURL} alt="search-image-result" />
+        <img src={imageURL} alt="search result" />
       </li>
     );
 };
