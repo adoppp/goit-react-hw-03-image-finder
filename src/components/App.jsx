@@ -7,7 +7,7 @@ import { Button } from './Button/Button';
 import { Loader } from './Loader/Loader';
 import { Modal } from './Modal/Modal';
 
-import api from '../Servises/api';
+import { fetchImages } from '../Servises/api';
 
 export class App extends Component  {
 
@@ -32,7 +32,7 @@ export class App extends Component  {
     if (prevQuery !== nextQuery || prevPage !== nextPage) {
       this.setState({ showLoader: true, error: null });
       try {
-        const data = await api.fetchImages(nextQuery, nextPage);
+        const data = await fetchImages(nextQuery, nextPage);
         const totalPage = Math.ceil(data.totalHits / 12)
         this.setState({
           data: [...this.state.data, ...data.hits],
