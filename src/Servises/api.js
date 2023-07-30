@@ -6,5 +6,3 @@ export const fetchImages = async (name, page = 1) => {
     }
     return await Promise.reject(`No image found with the name ${name}`);
 }
-
-export default { fetchImages };
